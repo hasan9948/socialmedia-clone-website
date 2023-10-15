@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/socialmediawebsite.css">
+    <script src="js/socialmediawebsite.js" defer></script>
+    <title>hassangram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="logo">exam notification</h2>
+            <!-- <div class="search-bar"> -->
+                <!-- <i class="uil uil-search"></i> -->
+                <!-- <input type="search" placeholder="search..."> -->
+            <!-- </div> -->
+            <!-- <div class="profile"> -->
+                <!-- <label class="btn btn-primary" for="create-post">create</label> -->
+                <!-- <div class="profile-picture"> -->
+                    <!-- <img src="images/hassan.jpeg" alt="hassan"> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </nav>
+
+    <!-- ----------main--------------- -->
+    <main>
+        <div class="container">
+            <div class="left">
+                <!-- <div class="main-profile">
+                    <img class="profile-picture" src="images/hassan.jpeg" alt="">
+                    <div class="profile-details">
+                        <h3>hassan</h3>
+                        <p class="text-muted">@abbu</p>
+                    </div>
+                </div> -->
+                <div class="menu-items">
+                    <a class="menu-item " href="home.html">
+                        <span><i class="uil uil-home"></i></span>
+                        <h4>home</h4>
+                    </a>
+                    <a class="menu-item active" href="academic.html">
+                        <span><i  class="fa fa-pencil" aria-hidden="true"></i>
+                        </span>
+                        <h4>academic</h4>
+                    </a>
+                    <a class="menu-item" href="events.html">
+                        <span><i class="fa fa-calendar"></i></span>
+                        <h4>events</h4>
+                    
+                    </a>
+                    <a class="menu-item" href="sports.html" >
+                        <span><i class="fa fa-trophy" ></i></span>
+                        <h4>sports</h4>
+                    </a> 
+                    <a class="menu-item" href="nss.html">
+                        <span><i class="fa fa-handshake"></i></span>
+                        <h4>nss</h4>
+                    </a>
+                    <a class="menu-item" href="cultural.html">
+                        <span><i class="fa fa-sign-language" ></i></span>
+                        <h4>cultural</h4>
+                    </a>
+                    <a class="menu-item" href="placements.html">
+                        <span><i class="fa fa-briefcase"></i></span>
+                        <h4>placements</h4>
+                    </a>
+                    <a class="menu-item" id="theme">
+                        <span><i class="uil uil-palette"></i></span>
+                        <h4>theme</h4>
+                    </a>
+                    
+                </div>
+               
+            </div>
+
+            <!-- middle -->
+            <div class="middle">
+                <!--stories beinging  -->
+                <!-- <div class="stories">
+                    <div class="story">
+                        <div class="story-profile profile-picture">
+                            <img src="images/profile-6.jpg" alt="">
+                        </div>
+                        <p>your story</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-profile profile-picture ">
+                            <img src="images/profile-7.jpg" alt="">
+                        </div>
+                        <p>hussam</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-profile profile-picture ">
+                            <img src="images/profile-12.jpg" alt="">
+                        </div>
+                        <p>husain</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-profile profile-picture ">
+                            <img src="images/profile-9.jpg" alt="">
+                        </div>
+                        <p>humed</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-profile profile-picture">
+                            <img src="images/profile-10.jpg" alt="">
+                        </div>
+                        <p>hafeez</p>
+                    </div>
+                    <div class="story">
+                        <div class="story-profile profile-picture">
+                            <img src="images/profile-11.jpg" alt="">
+                        </div>
+                        <p>hassan</p>
+                    </div>
+
+
+                </div> -->
+
+                <!--  create post search bar -->
+                 
+                <!--  create post search bar end -->
+
+
+                <!-- ----- feeds starts --- -->
+                
+                <div class="feeds">
+                    <div >
+                        <div class="container1 container-bar">
+                        <div class="topbtn">
+                        <h2 class="logo " >exam notification</h2>
+                        <button class="dropbtn btn btn-primary">add</button>
+                    </div>
+                        <form id="add-media-form">
+                            <label for="media-type">Media Type:</label>
+                            <select id="media-type">
+                                <option value="image">Image</option>
+                                <option value="video">Video</option>
+                            </select><br>
+                            <label for="media-file">Upload Media:</label>
+                            <input type="file" id="media-file" class="btn btn-primary"><br>                          <label for="media-title">Title:</label>
+                            <input type="text" id="media-title" class="btn"><br>
+                            <label for="media-description" class="des">Description:</label>
+                            <textarea id="media-description" class="btn"></textarea><br>
+                            <button type="button" class="btn-primary btn " id="add-media-button">Add Media</button>
+                        </form>
+                    </div>
+                        <h2>latest notification</h2>
+                        <ul id="media-list">
+                            <!-- Media items will be dynamically added here -->
+                        </ul>
+                    </div>
+                    <!-- <ul>
+                        <li class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-picture">
+                                        <img src="images/profile-1.jpg" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h4>abbu </h4>
+                                        <p class="text-muted">DUBAI ,15 MIN AGO</p>
+                                    </div>
+                                </div>
+                                <div class="edit">
+                                    <span><i class="uil uil-ellipsis-h"></i></span>
+                                </div>
+                            </div>
+    
+    
+                            <div class="photo">
+                                <img src="images/feed-1.jpg" alt="">
+                            </div>
+    
+    
+                            <div class="icons">
+                                <div class="interaction-icons">
+                                    <span><i class="uil uil-heart"></i></span>
+                                    <span><i class="uil uil-comment-dots"></i></span>
+                                    <span><i class="uil uil-share-alt"></i></span>
+                                </div>
+                                <div class="saved-icon">
+                                    <span><i class="uil uil-bookmark"></i></span>
+                                </div>
+                            </div>
+    
+    
+                            <div class="liked-by">
+                                <img src="images/profile-1.jpg" alt="">
+                                <img src="images/profile-20.jpg" alt="">
+                                <img src="images/profile-4.jpg" alt="">
+                                <p>liked by <b>hassan</b> and <B>2,444,334 others</B></p>
+                            </div>
+    
+                            <div class="caption"><b>abbu</b> Lorem Lorem, ipsum dolor. ipsum dolor sit amet.
+                                <b>#lifestyle</b></div>
+    
+                            <div class="commments text-muted"> view all 20078 comments</div>
+                        </li>
+                    </ul> -->
+                    <!-- feed 1 -->
+                    
+                <!--  feeds ends -->
+
+            </div>
+
+            <!-- end of the middle -->
+        </div>
+
+
+
+            <!--  right  startes-->
+            <div class="right">
+                <!-- messages starts  -->
+                <div class="messages">
+                    <div class="head">
+                        <h4>Messages</h4><i class="uil uil-edit"></i>
+                    </div>
+
+                    <!-- search bar -->
+                    <div class="search-bar">
+                        <!-- <i class="uil uil-search"></i> -->
+                        <!-- <input type="search" placeholder="search messages" id=""> -->
+                    </div>
+
+                    <!-- extraaa -->
+     
+    <div class="container" id="add-media-form">
+        <h1 class="logo smallfont">faculty suggestions</h1>
+        <input type="text" id="todoInput" class="btn" placeholder="Add a new task"><br>
+        <button onclick="addTask()" class="btn btn-primary">Add</button>
+        <ul id="todoList">
+          
+        </ul>
+    </div>
+
+
+
+                    <!--catagories  -->
+                    
+
+                    <!-- message 1 -->
+                    <!-- <div class="message">
+                        <div class="profile-picture">
+                            <img src="images/profile-11.jpg" alt="">
+                            <span class="active"></span>
+                        </div>
+                        <div class="message-info">
+                            <h5>abbu</h5>
+                            <p class="text-muted">had your lunch bruh ?</p>
+                        </div>
+                    </div> -->
+                   
+
+
+                </div>
+
+                <!-- messages ends -->
+
+                <!-- request starts -->
+           
+                <!-- reqeusts ends -->
+
+            </div>
+            <!--  right ends -->
+      
+    </main>
+
+    <!--  =============== costamize color size = ============== -->
+
+    <div class="costomize">
+        <div class="card">
+            <h3>Custamize your view </h2>
+            <p class="text-muted">manage your font size,color, and background</p>
+
+            <!-- font size -->
+            <div class="font-size">
+                <h4>Font size</h3>
+                <div class="font-size-bg">
+                    <h6>Aa</h6>
+                    <div class="sizes">
+                        <span class="font-size-1 active"></span>
+                        <span class="font-size-2"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-5"></span>
+                    </div>
+                    <h3>Aa</h3>
+                </div>
+            </div>
+            <!-- font size ends -->
+            <!-- color start -->
+
+            <div class="colors">
+                <h4>Color</h3>
+                <div class="color">
+                    <div class="color-1 active"></div>
+                    <div class="color-2"></div>
+                    <div class="color-3"></div>
+                    <div class="color-4"></div>
+                    <div class="color-5"></div>
+                </div>
+            </div>
+
+            <!-- color ends -->
+            <!-- background color starts -->
+
+            <div class="backgrounds">
+                <h4>Background</h3>
+                <div class="bg-color">
+                    <div class="bg-1 " ><span></span>Light</div>
+                    <div class="bg-2"><span></span>Dim</div>
+                    <div class="bg-3 active"><span></span>Lights out</div>
+                </div>
+            </div>
+
+            <!-- background color ends -->
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,98 @@
-const menuitems=document.querySelectorAll(".menu-item")
+
+
+function addTask() {
+    const input = document.getElementById("todoInput");
+    const taskText = input.value.trim();
+
+    if (taskText === "") {
+        return;
+    }
+
+    const ul = document.getElementById("todoList");
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <span>${taskText}</span>
+        <button class="cross btn" onclick="removeTask(this)">X</button>
+    `;
+
+    ul.insertBefore(li, ul.firstChild);
+
+    input.value = "";
+}
+
+function removeTask(button) {
+    const li = button.parentElement;
+    const ul = li.parentElement;
+    ul.removeChild(li);
+}
+
+
+//
+// dropdown
+drop = document.querySelector(".container-bar")
+dropbtn = document.querySelector(".dropbtn")
+dropbtn.addEventListener('click', function () {
+    drop.classList.toggle("container-bar")
+    // drop.classList.toggle("height_bar")
+    console.log("hhhhh")
+});
+// dropdown ends
+// new todo ends
+document.addEventListener('DOMContentLoaded', function () {
+    const addMediaButton = document.getElementById('add-media-button');
+    const mediaList = document.getElementById('media-list');
+
+    addMediaButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        const mediaType = document.getElementById('media-type').value;
+        const mediaFile = document.getElementById('media-file').files[0]; // Get the file input correctly
+        const mediaTitle = document.getElementById('media-title').value;
+        const mediaDescription = document.getElementById('media-description').value;
+
+        if (mediaType && mediaFile && mediaTitle) {
+            const mediaItem = document.createElement('li');
+            mediaItem.className = 'media-item';
+
+            if (mediaType === 'image') {
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(mediaFile);
+                 // Create a URL for the file
+                 mediaItem.innerHTML=`  <button class="cross-feed btn" onclick="removeTask(this)">X</button>`
+                mediaItem.appendChild(img);
+            } else if (mediaType === 'video') {
+                const video = document.createElement('video');
+                video.src = URL.createObjectURL(mediaFile); // Create a URL for the file
+                video.controls = true;
+                mediaItem.innerHTML=`  <button class="cross-feed btn" onclick="removeTask(this)">X</button>`
+                mediaItem.appendChild(video);
+            }
+
+            const title = document.createElement('div');
+            title.className = 'media-title';
+            title.textContent = mediaTitle;
+            mediaItem.appendChild(title);
+
+            const description = document.createElement('div');
+            description.className = 'media-description';
+            description.textContent = mediaDescription;
+            mediaItem.appendChild(description);
+
+            // Get the current date and time
+            const currentDate = new Date();
+            const postTime = document.createElement('div');
+            postTime.className = 'media-post-time';
+            postTime.textContent = 'Posted on ' + currentDate.toLocaleString();
+            mediaItem.appendChild(postTime);
+
+            // Insert the new media item at the beginning of the list
+            mediaList.insertBefore(mediaItem, mediaList.firstChild);
+        }
+    });
+});
+
+// extrsaaaaaaaaaaaaaa endsssssssssssssssssssss
+const menuitems = document.querySelectorAll(".menu-item")
 const notificationpoppup=document.querySelector(".notification-poppup")
 const notificationid=document.querySelector("#notification")
 const notificationcount=document.querySelector("#notification small")
@@ -35,34 +129,14 @@ function removeactive(){
 menuitems.forEach((menuitem) => {
     menuitem.addEventListener("click" ,()=>{
         removeactive()
-menuitem.classList.add("active")
-if (menuitem.id!='notification') {
-  notificationpoppup.style.display="none"
-  notificationcount.style.display="block"
+        menuitem.classList.add("active");
 
-}    else{
-  notificationpoppup.style.display="block"
-notificationcount.style.display="none"
-}
-if (menuitem.id!='messages') {
-    right.classList.remove("display-right")
-}
-    })
+
+})
 
 });
 // highlighting the the message box
-messageid.addEventListener("click",()=>{
-messagecount.style.display="none"
-// right.style.display="block" ;
-RightMessagesBox.style.boxShadow="0 0 2rem var(--color-primary)"
 
-right.classList.toggle("display-right")
-
-setTimeout(() => {
-RightMessagesBox.style.boxShadow="none"
-  
-}, 2000);
-})
 
 // right
 
@@ -93,11 +167,13 @@ Messagesearch.addEventListener("keyup" , findfriend)
 
 // theme costamization ////////
 themeicon.addEventListener("click",()=>{
-    theme.style.display='flex'
+    console.log("jjjd")
+    theme.style.display = 'flex'
 })
 theme.addEventListener("click",(e)=>{
     if (e.target.classList.contains('costomize')) {
         theme.style.display='none'
+        console.log("hassdfg")
     }
 })
 

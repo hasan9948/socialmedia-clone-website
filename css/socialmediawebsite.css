@@ -11,12 +11,46 @@
     text-decoration: none;
     outline: none;
 }
+.smallfont{
+    font-size: 1.5rem;
+}
+a{
+    color: var(--color-secondary);
+}
+a:active{
+    color: var(--color-secondary);
+}
+.container-bar{
+    height: 60px;
+    overflow: hidden;
+    /* border: 3px solid red; */
+}
+.height_bar{
+    
+    overflow: none;
+}
+.addbtn{
+    display: inline-block;
+    margin-right: 200px;
+}
+
+.topbtn{
+    display: flex;
+justify-content: space-around;
+    /* border: 3px solid red; */
+}
+
+
 
 :root {
 --hue-primary:252;
---white:100%;
+/* --white:100%; */
+--white:10%;
+--light:0%;
+--dark:100%;
+/* --white:100%;
 --light:95%;
---dark:17%;
+--dark:0%; */
 
     --color-dark: hsl(252, 30%, 17%);
     --color-light: hsl(252, 30%, var(--light));
@@ -36,6 +70,15 @@
     --card-padding: 1rem;
 }
 
+h4{
+    text-transform: uppercase;
+}
+
+/* todo start  */
+input ,textarea,select{
+    border: 1px solid;
+}
+/*  todo end */
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark);
@@ -155,6 +198,7 @@ main .container {
     left: 0;
     /* border: 1px solid #000; */
     height: fit-content;
+
 background-color: var(--color-light);
 }
 
@@ -176,6 +220,7 @@ main .container .left .main-profile {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+   
 }
 
 .menu-items .menu-item {
@@ -187,7 +232,7 @@ main .container .left .main-profile {
     padding: calc(var(--card-padding) - .3rem);
     border-left: .5rem solid transparent;
     width: 100%;
-
+    color: var(--color-primary);
 }
 
 
@@ -199,6 +244,7 @@ i {
     background-color: transparent;
     cursor: pointer;
     color: var(--color-primary);
+    opacity: .8;
 }
 
 .menu-item.active {
@@ -435,17 +481,111 @@ i{
     cursor: pointer;
 }
 
+
+/* middllelldknflndslgflghlfhgh */
+li {
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--color-light);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.cross{
+    color: var(--color-danger);
+     background-color: rgba(255, 0, 0, 0.358);
+}
+.cross-feed{
+    color: red;
+    width: 2px;
+    background-color:transparent;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:var(--color-light);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container1 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            /* background-color:var(--color-white); */
+        }
+
+        #media-list {
+            list-style: none;
+            padding: 0;
+            
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .media-item {
+            background-color:var(--color-white);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: var(--color-dark);
+            display: flex;
+            flex-direction: column;
+            }
+
+        .media-item img, .media-item video {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .media-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .media-description {
+            font-size: 14px;
+            padding: 10px;
+            text-transform: capitalize;
+        
+        }
+
+        #add-media-form {
+            background-color:var(--color-white);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            
+        }
+   
 /*  ============== right ============= */
 /* messages  */
 .right{
     position: sticky;
     top: -30rem;
     height: max-content;
+    
 }
 .right .messages{
     background-color: var(--color-white);
     padding: var(--card-padding);
-    border-radius: var(--border-radius);
+    border-radius: 8px;
 
 }
 
